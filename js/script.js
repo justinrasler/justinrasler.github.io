@@ -10,6 +10,7 @@ $.ajax({
 );
 
 const $pokemon = $("#pokemon")
+const $image = $("#image")
 const $type = $("#type");
 const $xp = $("#xp");
 const $height = $("#height");
@@ -21,6 +22,10 @@ const $input = $('input[type="text"]');
 
 let pokeData;
 
+
+
+
+
 function handleGetData(event){
     event.preventDefault();
 
@@ -31,6 +36,7 @@ function handleGetData(event){
        console.log(data);
        pokeData = data;
        render($input.val(""));
+       $image.attr('src',data.sprites.front_default);
        $pokemon.text(data.name);
        $type.text(data.types[0].type.name);
        $xp.text(data.base_experience);
@@ -47,6 +53,7 @@ function handleGetData(event){
 }
 
 function render(){
+$image.attr('src',pokeData.sprites.front_default);
 $pokemon.text(pokeData.name)
 $type.text(pokeData.types[0].type.name)
 $xp.text(pokeData.base_experience)
