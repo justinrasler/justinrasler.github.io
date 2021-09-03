@@ -13,8 +13,7 @@ input[type=submit]{
    body{
        background-size:cover;
        position: relative;
-       
-       background-image: url(https://www.wallpapertip.com/wmimgs/81-813546_rotom-pokedex-background.jpg);
+       background-image: url(https://st2.depositphotos.com/3213441/12022/v/950/depositphotos_120226298-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg);
    }
 
     /* #pokemon{
@@ -82,4 +81,29 @@ input[type=submit]{
           background-color: lavender;
           /* display: table-cell; */
         
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px hidden black;
+      }
+      
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        font-size: 15px;
+      
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
       }
