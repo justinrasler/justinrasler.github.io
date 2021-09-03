@@ -52,6 +52,8 @@ function handleGetData(event){
     );
 }
 
+
+
 function render(){
 $image.attr('src',pokeData.sprites.front_default);
 $pokemon.text(pokeData.name)
